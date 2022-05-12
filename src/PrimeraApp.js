@@ -1,13 +1,28 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import './index.css';
 
-const PrimeraApp = () => {
+const PrimeraApp = ({saludo, caption}) => {
+
+   if(!saludo){
+       throw new Error('the saludo is required')
+   }
+
     return (
-        <div>
-            <h1>Hola Mundo Gamer</h1>
-            <p>Aplicacion de laboratorio</p>
-        </div>
+        <React.Fragment>
+            <h1>{saludo}</h1>
+            {/* <pre>{JSON.stringify(saludo,null ,3)}</pre> */}
+            <p>{caption}</p>
+        </React.Fragment>
     );
+}
+
+PrimeraApp.prototype = {
+    saludo: PropTypes.string.isRequired
+}
+
+PrimeraApp.defaultProps ={
+    caption: 'I am a caption'
 }
 
 export default PrimeraApp;

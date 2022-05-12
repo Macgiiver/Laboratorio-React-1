@@ -1,9 +1,10 @@
 import React from "react";
 import { createRoot }  from "react-dom/client";
-import PrimeraApp from "./PrimeraApp";
+import CounterApp from "./CounterApp";
+//import PrimeraApp from "./PrimeraApp";
 
 
 const root = createRoot(document.getElementById('root'));
 
-root.render( <PrimeraApp /> );
+root.render( <CounterApp value={18} /> );
 
