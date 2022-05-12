@@ -6,5 +6,5 @@ import CounterApp from "./CounterApp";
 
 const root = createRoot(document.getElementById('root'));
 
-root.render( <CounterApp value={18} /> );
+root.render( <CounterApp value={10} /> );
 
